@@ -114,24 +114,24 @@ public class Main {
                         String newName = scanner.next();
                         main.updatePersonName(UUID.fromString(trainerId), newName);
                         break;
-
                     case 4:
-
+                        System.out.println("Enter the Person Id: ");
+                        String personId = scanner.next();
+                        main.deletePerson(UUID.fromString(personId));
                         break;
+
                     case 5:
+                        System.out.println("Enter the Trainer New Name: ");
+                        String trainerNewName = scanner.next();
+                        System.out.println("Enter the Trainer Id: ");
+                        String trainerId2 = scanner.next();
+                        main.updateTrainerName(UUID.fromString(trainerId2), trainerNewName);
                         break;
                     case 6:
-
+                        System.out.println(main.listAllPerson());
                         break;
-
                     case 7:
-
-                        break;
-                    case 8:
-
-                        break;
-                    case 9:
-
+                        System.out.println(main.listAllTrainer());
                         break;
 
                     default:
@@ -153,13 +153,12 @@ public class Main {
         System.out.println("1) Add Person To GYM [+]\n" +
                 "2) Add Trainer [+]\n" +
                 "3) Update Person Name in GYM [+]\n" +
-                "4) update Student By RoomId And StudentId [+]\n" +
-                "5) update Room Number Of Student [+]\n" +
-                "6) add room [+]\n" +
-                "7) update Room Number [-]\n" +
-                "8) update Student By Room Id And Student Id [+]\n" +
-                "9) Enter the room id to find Room By Id [+]");
-        System.out.println("10) exit");
+
+                "4) Delete Person [+]\n" +
+                "5) Update Trainer Name [+]\n" +
+                "6) List All Persons in the GYM!! [+]\n" +
+                "7) List All Trainers in the GYM!![+]");
+        System.out.println("8) exit");
     }
 }
 
